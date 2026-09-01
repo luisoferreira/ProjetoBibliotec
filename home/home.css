@@ -229,3 +229,30 @@ place-items: center;
     padding: 0 120px;
     color: var(--branco);
 }
+
+
+.livros-recomendados{
+    padding: 50px 120px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-between;
+
+     gap: 10px;
+}
+
+
+.cards{
+  
+ margin-top: 100px;
+    gap: 100px;
+    display: grid;
+
+    grid-template-columns: repeat(4, 20%);
+    gap: 10%;
+
+    justify-content: center;
+   
+}
