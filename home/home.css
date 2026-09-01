@@ -1,37 +1,39 @@
-
-
 /* CABEÇALHO */
 
-a{
+a {
     color: var(--branco);
-    text-decoration: none; /* TIRA O SUBLINHADO DO LINK */
+    text-decoration: none;
+    /* TIRA O SUBLINHADO DO LINK */
 
 }
 
-.cabecalho{
+.cabecalho {
     background-color: var(--azul-escuro);
 
     display: flex;
     /* Alinha no sentido do flex */
     justify-content: space-between;
 
-    align-items: center; /* Alinha no sentido contrário do flex*/ 
+    align-items: center;
+    /* Alinha no sentido contrário do flex*/
 
     padding: 0 120px;
 
-    height: 10vh; /* significa 10% da visualização vertical do dispositivo*/
+    height: 10vh;
+    /* significa 10% da visualização vertical do dispositivo*/
 
 }
 
-.navegacao{
+.navegacao {
     display: flex;
     align-items: center;
     gap: 50px;
 }
 
-.navegacao a{
+.navegacao a {
     text-transform: uppercase;
-    font-size: 1em; /*Equivale a 16px*/
+    font-size: 1em;
+    /*Equivale a 16px*/
     font-weight: 500;
 
 }
@@ -40,7 +42,7 @@ a{
 /* CONTEUDO PRINCIPAL */
 
 /* Primeiro banner */
-.banner-principal{
+.banner-principal {
     color: var(--branco);
 
     height: 70vh;
@@ -58,7 +60,7 @@ a{
 }
 
 
-.texto-banner{
+.texto-banner {
     height: 100%;
 
     display: flex;
@@ -68,17 +70,16 @@ a{
 
     justify-content: center;
 
-    gap: 50px
-    ;
+    gap: 50px;
 }
 
-.texto-banner p{
+.texto-banner p {
     font-size: 1.5em;
 
-    width: 50%;
+    width: 60%;
 }
 
-.botao{
+.botao {
     padding: 20px 50px;
 
     border-radius: 10px;
@@ -88,9 +89,143 @@ a{
 
     font-size: 1.2em;
     font-weight: 700;
+
+    text-transform: uppercase;
 }
 
-.banner-principal img{
+.botao:hover {
+    background-color: #2ab2ab;
+    color: var(--branco);
+
+
+}
+
+.banner-principal img {
     align-self: flex-end;
     width: 35%;
+}
+
+
+
+/* TITULO DAS SEÇÕES */
+
+.titulo-secao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.titulo-secao h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+
+.titulo-secao span {
+    display: flex;
+    width: 250px;
+    height: 4px;
+    background-color: var(--cor-destaque);
+}
+
+/* SEÇÃO BENEFICIOS */
+
+.beneficios {
+    padding: 50px 120px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-between;
+
+     gap: 100px;
+}
+
+.beneficios-lista{
+    display: grid;
+
+    grid-template-columns: repeat(3, 20%);
+    gap: 10%;
+
+    justify-content: center;
+}
+
+.beneficio{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 20px 50px; /* CIMA /DIREITA e ESQUERDA/ BAIXO  */
+
+    border: 1px solid var(--azul-escuro);
+    border-radius: 30px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25);  /* X -> Y -> BLUR -> COR COM TRANSPARÊNCIA*/
+
+    text-align: center;
+    
+    /*Cria referencia de posicionamento para o icone , quando o icone for posicionado , usa esse card como referencia*/
+
+    /* Sem isso , o circulo poderia usar outro elemento da página como referencia e sair passeando pelo layout*/
+    position: relative; 
+}
+
+.beneficio-icone img{
+    width: 50%;
+}
+
+.beneficio-icone{
+
+border: 4px solid var(--cor-destaque);
+background-color: var(--branco);
+border-radius: 50%;
+
+width: 30%;
+height: 30%;
+
+/*  retira o icone do fluco normal , com o absolute ele pode ficar por cima do card   */
+position: absolute;
+
+/* move o circulo para cima , o valor negativo faz ele sair parcialmente do card */
+top: -15%;
+
+/* coloca o começo de elemento em 50% da largura do card */
+left: 50%;
+
+/* Ajustamos o posicionamento do elemento , mas a borda esquerda do circulo fica no centro , nao o circulo inteiro  */
+/* Por isso usamos transform: translateX(-50%) que move o proprio ciculo para a esquerda em 50% da largura dele 
+, fazendo com que o circulo fique perfeitamente centralizado*/
+transform: translateX(-50%);
+
+display: grid;
+place-items: center;
+}
+
+.beneficio h3{
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    width: 90%;
+}
+
+
+.beneficio p{
+    font-size: 1em;
+    width: 80%;
+}
+
+.banner-meio{
+    height: 60vh;
+    background-image: url(../imgs/Banner\ centro.svg);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 0 120px;
+    color: var(--branco);
 }
