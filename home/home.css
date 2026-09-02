@@ -233,7 +233,63 @@ a {
 }
 
 
-.livros-recomendados {
+.acervo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    gap: 100px;
+
+    padding: 50px 120px;
+}
+
+.livros{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    gap: 5%;
+    margin-top: 100px;
+}
+
+
+
+.livro{
+ display: flex;
+ flex-direction: column;
+
+ align-items: center;
+ justify-content: space-between;
+
+ gap: 20px;
+ text-align: center;
+
+}
+
+
+.livro img{
+    height: 300px;
+}
+
+.livro h3{
+    text-transform: uppercase;
+    font-size: 1em;
+    width: 70%;
+}
+
+.livro-texto{
+    font-size: 0.8em;
+}
+
+
+
+
+
+
+
+
+
+
+/* .livros-recomendados {
     padding: 50px 120px;
 
     display: flex;
@@ -347,4 +403,4 @@ a {
 .redes-sociais{
     display: flex;
     flex-direction: column;
-}
+} */
