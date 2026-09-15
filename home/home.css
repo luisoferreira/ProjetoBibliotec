@@ -1,43 +1,5 @@
 /* CABEÇALHO */
 
-a {
-    color: var(--branco);
-    text-decoration: none;
-    /* TIRA O SUBLINHADO DO LINK */
-
-}
-
-.cabecalho {
-    background-color: var(--azul-escuro);
-
-    display: flex;
-    /* Alinha no sentido do flex */
-    justify-content: space-between;
-
-    align-items: center;
-    /* Alinha no sentido contrário do flex*/
-
-    padding: 0 120px;
-
-    height: 10vh;
-    /* significa 10% da visualização vertical do dispositivo*/
-
-}
-
-.navegacao {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
-
-.navegacao a {
-    text-transform: uppercase;
-    font-size: 1em;
-    /*Equivale a 16px*/
-    font-weight: 500;
-
-}
-
 
 /* CONTEUDO PRINCIPAL */
 
@@ -289,7 +251,7 @@ a {
 
 
 
-/* .livros-recomendados {
+ .livros-recomendados {
     padding: 50px 120px;
 
     display: flex;
@@ -378,6 +340,15 @@ a {
 .navegacao
 {
     display: flex;
+   
+    gap: 60px;
+  
+}
+
+.navegacao-footer
+{
+    display: flex;
+    flex-direction: column;
     gap: 60px;
   
 }
@@ -403,4 +374,5 @@ a {
 .redes-sociais{
     display: flex;
     flex-direction: column;
-} */
+} 
+
