@@ -24,3 +24,7 @@ checkboxes.forEach((caixinha , indice, lista) =>{
     })
     
 }) 
+
+
+
+
